@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+
 
 export const CenterWrapper = styled.div`
   position: relative;
@@ -18,8 +19,6 @@ export const CenterWrapper = styled.div`
     border: 1px solid #ddd;
     border-radius: 24px;
     cursor: pointer;
-    will-change: transform, opacity;
-
     ${props => props.theme.mixin.boxShadow};
 
     .text {
@@ -44,7 +43,6 @@ export const CenterWrapper = styled.div`
     position: relative;
     transform-origin: 50% 0;
     will-change: transform, opacity;
-    /* transition: all 250ms linear; */
 
     .infos {
       position: absolute;

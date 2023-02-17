@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
+
 export const HeaderWrapper = styled.div`
+
   &.fixed {
     position: fixed;
     z-index: 99;
@@ -11,27 +13,22 @@ export const HeaderWrapper = styled.div`
 
   .content {
     position: relative;
-    z-index: 9;
+    z-index: 19;
     transition: all 250ms ease;
+    background-color: ${props => props.theme.isAlpha ? "rgba(255,255,255,0)": "rgba(255,255,255,1)"};
     border-bottom: 1px solid #eee;
-    border-bottom-color: ${props => props.theme.isAlpha ? "rgba(238,238,238,0)" : "rgba(238,238,238,1)"};
-    background-color: ${props => props.theme.isAlpha ? "rgba(238,238,238,0)" : "rgba(238,238,238,1)"}; 
-    
-    .top {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    padding: 0 24px;
-  }
+    border-bottom-color: ${props => props.theme.isAlpha ? "rgba(233,233,233,0)": "rgba(233,233,233,1)"};
 
-    .search-area{
-      height: 100px;
+    .top {
+      display: flex;
+      align-items: center;
+      height: 80px;
     }
   }
 
-
   .cover {
     position: fixed;
+    z-index: 9;
     left: 0;
     right: 0;
     top: 0;
@@ -40,7 +37,7 @@ export const HeaderWrapper = styled.div`
   }
 `
 
-export const SearchAreaPlaceholder = styled.div`
-height: ${props => props.isSearch ? "100px" : "0"};
-transition: height 250ms ease;
+export const SearchAreaWrapper = styled.div`
+  transition: height 250ms ease;
+  height: ${props => props.isSearch ? "100px": "0"};
 `

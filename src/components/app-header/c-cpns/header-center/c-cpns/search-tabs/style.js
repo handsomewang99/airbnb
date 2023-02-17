@@ -18,7 +18,6 @@ export const TabsWrapper = styled.div`
       left: 0;
       width: 64px;
       height: 2px;
-      /* background-color: ${props => props.theme.color}; */
       background-color: ${props => props.theme.isAlpha ? "#fff": "#333"};
     }
   }
