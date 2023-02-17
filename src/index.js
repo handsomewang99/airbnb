@@ -6,20 +6,18 @@ import { ThemeProvider } from 'styled-components'
 
 import App from '@/App'
 import "normalize.css"
-import "./assets/css/index.less"
 import "antd/dist/antd.less"
+import "./assets/css/index.less"
 import store from './store'
 import theme from './assets/theme'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Suspense fallback="loading">
-    <Provider store={store}>
+  <Provider store={store}>
       <ThemeProvider theme={theme}>
         <HashRouter>
-          <App/>
+          <App />
         </HashRouter>
       </ThemeProvider>
-    </Provider>
-  </Suspense>
+  </Provider>
 );
